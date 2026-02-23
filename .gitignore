@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+venv/
+env/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Optuna databases (auto-created, large)
+*.db
+optuna_*.db
+
+# Large output files — keep CSVs and PNGs, skip HTMLs (too large for GitHub)
+outputs/charts/*.html
