@@ -5,6 +5,8 @@
 **Author:** Derren Winata | NUS Data Science & Analytics  
 **Stack:** Python · Optuna · statsmodels · yfinance · Plotly
 
+> 📄 **[Read the full walk-forward report (PDF)](outputs/reports/Bayesian_Pair_Trading_WalkForward_Report.pdf)** — 10 pages: headline results, full performance detail, methodology, and all charts. Chart PDFs are also available alongside the PNGs in [`outputs/charts/`](outputs/charts/).
+
 ---
 
 ## 🗺️ What Makes This Different from Naive BO Backtests
@@ -34,7 +36,9 @@
 ![GS/WFC Dashboard](outputs/charts/GS_WFC_dashboard.png)
 
 > Interactive HTML dashboards (zoom, hover tooltips, regime shading) are in `outputs/charts/`.  
-> The adaptive portfolio vs SPY chart: `outputs/charts/adaptive_portfolio_vs_spy.png`
+> The adaptive portfolio vs SPY chart: `outputs/charts/adaptive_portfolio_vs_spy.png`  
+> Every chart is also available as a print-ready PDF in `outputs/charts/`, and all of them are
+> collected in the [full report (PDF)](outputs/reports/Bayesian_Pair_Trading_WalkForward_Report.pdf).
 
 ---
 
@@ -111,16 +115,23 @@ pair_trading_bayesian_optimization/
 ├── README.md
 ├── linkedin_description.md                    # Resume bullets + LinkedIn post draft
 └── outputs/
+    ├── reports/
+    │   ├── Bayesian_Pair_Trading_WalkForward_Report.pdf  # Full 10-page report (tables + all charts)
+    │   └── Bayesian_Pair_Trading_WalkForward_Report.md   # Markdown source for the report
     ├── charts/
-    │   ├── META_NVDA_dashboard.html/png       # 6-panel interactive dashboard per pair
-    │   ├── GS_WFC_dashboard.html/png
-    │   ├── adaptive_portfolio_vs_spy.html/png # Equal-weight portfolio vs SPY
-    │   ├── attribution_analysis.html/png      # Regime Sharpe heatmap + correlation
+    │   ├── META_NVDA_dashboard.html/png/pdf   # 6-panel interactive dashboard per pair
+    │   ├── GS_WFC_dashboard.html/png/pdf
+    │   ├── adaptive_portfolio_vs_spy.html/png/pdf # Equal-weight portfolio vs SPY
+    │   ├── attribution_analysis.html/png/pdf      # Regime Sharpe heatmap + correlation
     │   └── ...
     └── data/
         ├── results_summary.csv                # Sharpe, Sortino, MaxDD, TotRet, Calmar
         └── PAIR_params.csv                    # Quarterly BO parameters per pair (28 rows)
 ```
+
+**Print-ready PDFs:** every chart exists as `.png`, `.pdf` and `.html`. The report at
+`outputs/reports/` is generated from `results_summary.csv`, so the figures in it trace
+directly to committed data rather than being transcribed by hand.
 
 ---
 
